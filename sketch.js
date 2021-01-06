@@ -132,11 +132,15 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
     
-    if(touches.length>0 || keyDown("SPACE")) {      
+    if(touches.length>0 ) {      
       reset();
       touches = []
     }
+     if(mousePressedOver(restart)) {
+      reset();
+    }
   }
+    
   
   
   drawSprites();
